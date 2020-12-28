@@ -1,0 +1,71 @@
+public class Main {
+    //1. Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;
+    public static void main(String[] args) {
+        changeNumber(1);
+        //2. Задать пустой целочисленный массив размером 8. С помощью цикла заполнить его значениями 0 3 6 9 12 15 18 21;
+        multiplyingThree(1);
+        //3. Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] пройти по нему циклом, и числа меньшие 6 умножить на 2;
+        numbersLessThanSixOutMultiplyByTwo(1);
+        //4. Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое), и с помощью цикла(-ов) заполнить его диагональные элементы единицами;
+        squareMassive(3);
+    }
+
+    public static void changeNumber(int args) {
+        System.out.println("Exercise#1");
+        int[] numbers = new int[10];
+        numbers[0] = 1;
+        numbers[1] = 1;
+        numbers[2] = 0;
+        numbers[3] = 0;
+        numbers[4] = 1;
+        numbers[5] = 0;
+        numbers[6] = 1;
+        numbers[7] = 1;
+        numbers[8] = 0;
+        numbers[9] = 0;
+        for (int i = 0; i < 10; i++) {
+            if (numbers[i] == 1) {
+                System.out.println("i[" + i + "] = " + (numbers[i] - numbers[i]));
+            } else {
+                System.out.println("i[" + i + "] = " + (numbers[i] + 1));
+            }
+        }
+
+    }
+
+    public static void multiplyingThree(int args) {
+        System.out.println("Exercise#2");
+        int[] posloupnost = new int[8];
+        for (int i = 0; i < 8; i++) {
+            System.out.println("i[" + i + "] = " + (i * 3));
+        }
+        ;
+
+    }
+
+    public static void numbersLessThanSixOutMultiplyByTwo(int args) {
+        System.out.println("Exercise#3");
+        int[] nums = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < 6) {
+                System.out.println("i[" + i + "] = " + (nums[i] * 2));
+            } else {
+                System.out.println("i[" + i + "] = " + nums[i]);
+            }
+        }
+    }
+    public static void squareMassive(int args) {
+        System.out.println("Exercise#4");
+        int[][] square = new int[3][3];
+        int i, j, k = 0;
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+               if(i == j){
+                   square[i][j] = 1;
+               }
+            }
+            System.out.println(i + j + square[i][j]);
+        }
+    }
+}
+
